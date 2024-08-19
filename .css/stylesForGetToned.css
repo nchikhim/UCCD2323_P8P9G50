@@ -1,0 +1,566 @@
+/* General Styles */
+body {
+    font-family: 'Futura', Arial, sans-serif;
+    background-color: #152238;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+img, iframe, video {
+    max-width: 100%;
+    height: auto;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar-brand.text-white.fs-2.fw-bold {
+    margin-top: 40px; /* Adjust this value to move the element downward */
+}
+
+/* Map Container */
+#map {
+    height: 400px;
+    width: 100%; /* Change from 50% to 100% to ensure it fits within container */
+    max-width: 1500px;
+    margin: auto;
+    touch-action: pan-x pan-y;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    #map {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #map {
+        height: 600px;
+    }
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+/* Muscle Toning Section */
+.muscle-toning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1400px;
+    padding-top: 100px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.muscle-toning h2 {
+    font-family: 'Futura', sans-serif;
+    color: #424530;
+    margin-bottom: 1rem;
+}
+
+.muscle-toning p {
+    color: #424530;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Toning Cards Container */
+.toning-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Individual Toning Card */
+.toning-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1 1 calc(50% - 1rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.toning-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.toning-card h3 {
+    font-family: 'Didot', serif;
+    color: #E09132;
+    margin-bottom: 0.5rem;
+}
+
+.toning-card p {
+    color: #424530;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .toning-cards {
+        max-width: 600px;
+    }
+
+    .toning-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .toning-card {
+        flex: 1 1 100%; /* Ensure cards stack on smaller screens */
+        margin-bottom: 1rem;
+    }
+
+    .muscle-toning {
+        width: 100%;
+    }
+
+    .toning-cards {
+        max-width: 100%;
+    }
+}
+
+/* Card Style for Tables */
+.table-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Ensure vertical alignment */
+    overflow: auto; /* Enable scrolling if needed */
+}
+
+.table-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Ensure content can scroll */
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 100%; /* Ensure full width usage */
+    position: relative;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+/* Header Flexbox */
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+.table-container h2 {
+    font-family: 'Futura', sans-serif;
+    color: #424530;
+    margin: 0;
+    text-align: center;
+}
+
+/* Flex container for vertical stacking */
+.content-container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 1rem; /* Space between sections */
+    flex-wrap: wrap;
+}
+
+/* Ensure table-card and flashcard-container occupy full width */
+.table-container, .flashcard-container {
+    flex: 1 1 100%; /* Allow sections to take full width */
+}
+
+/* Additional adjustments if needed */
+.table-container {
+    margin-bottom: 1rem;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.flashcard-container {
+    margin-bottom: 1rem;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures table fits within the container */
+}
+
+.table-container th, .table-container td {
+    padding: 0.8rem; /* Adjusted padding for better fit */
+    text-align: left;
+}
+
+.table-container thead {
+    background-color: #E09132;
+    color: #fff;
+}
+
+.table-container th {
+    font-weight: bold;
+    font-family: 'Optima', sans-serif;
+}
+
+.table-container tbody tr:nth-child(even) {
+    background-color: #e4dedc;
+    color: #031016;
+}
+
+.table-container tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+    color: #031016;
+}
+
+.table-container tbody tr:hover {
+    background-color: #e8e5e4;
+}
+
+.table-container td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 414px) {
+    .table-card {
+        padding: 1rem; /* Ensure padding is not too small */
+        margin: 0.5rem; /* Adjust margin for small screens */
+    }
+
+    .table-container {
+        flex-direction: column; /* Stack table and other content vertically */
+        align-items: stretch; /* Ensure items stretch to fit width */
+        overflow-x: auto; /* Enable horizontal scrolling if table overflows */
+    }
+
+    .table-container table {
+        width: 100%;
+        max-width: 100%; /* Ensure table fits within container */
+    }
+
+    .table-container th, .table-container td {
+        padding: 0.5rem; /* Reduced padding for smaller screens */
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+
+    .table-container tbody tr {
+        display: block; /* Display each row as a block */
+        margin-bottom: 0.5rem; /* Less margin between rows */
+    }
+
+    .table-container tbody tr td {
+        display: flex;
+        justify-content: space-between; /* Spread label and data */
+        padding: 0.5rem 0; /* Adjusted padding */
+    }
+
+    .table-container tbody tr td::before {
+        content: attr(data-label); /* Use data-label attribute to show label on mobile */
+        font-weight: bold;
+        text-transform: capitalize;
+        flex-basis: 40%;
+        padding-right: 0.5rem; /* Adjusted padding */
+    }
+}
+
+
+
+/* Exercise Card Styling */
+.exercise-card {
+    background-color: #fff;
+    padding: 20px; /* Adjusted padding */
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.5s, opacity 0.5s, filter 0.5s; 
+    transform-style: preserve-3d;
+    height: auto; /* Allow height to adjust dynamically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; /* Ensure overflow content is hidden */
+}
+
+.exercise-card video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.exercise-card h3 {
+    color: #424530;
+    margin: 0;
+}
+
+.exercise-card p {
+    color: #424530;
+    margin: 10px 0 0 0;
+}
+
+.exercise-card .card {
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    line-height: 1.2; /* Adjust line height */
+    word-wrap: break-word;
+}
+
+.exercise-card .card-content {
+    overflow-y: auto; /* Add scrolling if content exceeds height */
+    max-height: 100%; /* Prevent overflow beyond the card */
+}
+
+/* Center card prominence */
+.exercise-card.slick-center {
+    transform: scale(1.2) rotateY(20deg);
+    z-index: 1;
+    filter: brightness(100%);
+    border-radius: 20px; 
+    height: 500px; 
+    margin-top:30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.exercise-card.slick-center video {
+    border-radius: 0;
+    margin-top: 10px; 
+    width: 90%; 
+    height: auto; 
+}
+
+.exercise-card:not(.slick-center) {
+    transform: scale(0.8) rotateY(-20deg);
+    opacity: 0.5;
+    filter: brightness(98%); 
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .exercise-card.slick-center {
+        transform: scale(1) rotateY(0deg);
+        height: auto; 
+    }
+
+    .exercise-card.slick-center video {
+        margin-top: 10px;
+    }
+
+    .exercise-card:not(.slick-center) {
+        transform: scale(0.95) rotateY(0deg);
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .exercise-card.slick-center {
+        transform: scale(0.9) rotateY(0deg);
+        height: auto; 
+    }
+
+    .exercise-card.slick-center video {
+        margin-top: 5px;
+        margin-right: 0; 
+    }
+
+    .exercise-card:not(.slick-center) {
+        transform: scale(0.8) rotateY(0deg);
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 414px) {
+    .exercise-card {
+        padding: 10px; /* Reduce padding */
+        border-radius: 10px;
+        height: auto; /* Allow height to adjust */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .exercise-card h3 {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .exercise-card p {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .exercise-card.slick-center {
+        height: auto; /* Allow the height to adjust */
+        width: 100%;  /* Ensure full width usage */
+        margin-top: 10px; /* Adjust margin if necessary */
+        transform: scale(1);
+    }
+
+    .exercise-card .card {
+        padding: 10px; /* Reduce padding */
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .exercise-card .card h2 {
+        font-size: 16px; /* Adjust to fit */
+    }
+    
+    .exercise-card .card p {
+        font-size: 12px; /* Adjust to fit */
+        line-height: 1.2; /* Reduce line height to fit text */
+    }
+
+    .exercise-card iframe, 
+    .exercise-card video {
+        width: 100%; /* Ensure embedded media fits within the card */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 300px; /* Adjust the max height for smaller screens */
+    }
+}
+
+/* Slick Arrow Styles */
+.slick-prev, .slick-next {
+    background-color: #E09132;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #fff;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: #424530;
+}
+
+
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+    font-family: 'DIN', sans-serif;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%; /* Ensure form elements fit within container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+form input[type="submit"] {
+    background-color: #E09132;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ensure submit button fits within container */
+    font-size: 18px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #424530;
+}
+
+/* Feedback Card Style */
+.feedback-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+.feedback-card h2 {
+    font-family: 'Futura', sans-serif;
+    color: #424530;
+    margin-bottom: 1.5rem;
+}
+
+.feedback-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-card label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: left;
+    color: #424530;
+}
+
+.feedback-card input, .feedback-card textarea, .feedback-card select {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.feedback-card input[type="submit"] {
+    background-color: #E09132;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    width: 100%;
+}
+
+.feedback-card input[type="submit"]:hover {
+    background-color: #424530;
+}
