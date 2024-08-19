@@ -1,81 +1,61 @@
-name: CI/CD Pipeline
+name: Build and deploy ASP.Net Core app to Azure Web App - Fitness
 
 on:
   push:
     branches:
       - main
-      - staging
-  pull_request:
-    branches:
-      - main
-      - staging
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    runs-on: windows-latest
 
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v2
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '6.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
 
-      - name: Build solution
-        run: dotnet build --configuration Release --no-restore
+      - name: dotnet publish
+        run: dotnet publish -c Release -o ./myapp
 
-      - name: Run tests
-        run: dotnet test --no-restore --verbosity normal
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: .net-app
+          path: ./myapp
 
-  deploy-staging:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: windows-latest
     needs: build
-    if: github.ref == 'refs/heads/staging'
-    
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    permissions:
+      id-token: write
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v2
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
         with:
-          dotnet-version: '6.0.x'
+          name: .net-app
 
-      - name: Publish artifacts
-        run: dotnet publish -c Release -o out
-
-      - name: Deploy to Staging
-        uses: azure/webapps-deploy@v2
+      - name: Login to Azure
+        uses: azure/login@v2
         with:
-          app-name: 'Fitness-staging' # Replace with your actual staging app name
-          publish-profile: ${{ secrets.STAGING_AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: './out'
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID }}
 
-  deploy-production:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.ref == 'refs/heads/main'
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v2
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
         with:
-          dotnet-version: '6.0.x'
-
-      - name: Publish artifacts
-        run: dotnet publish -c Release -o out
-
-      - name: Deploy to Production
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'Fitness' # Replace with your actual production app name
-          publish-profile: ${{ secrets.PRODUCTION_AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: './out'
+          app-name: 'Fitness'
+          slot-name: 'Production'
+          package: ./myapp
