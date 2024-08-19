@@ -52,7 +52,7 @@ jobs:
       - name: Deploy to Staging
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'your-staging-webapp-name'
+          app-name: 'Fitness-staging' # Replace with your actual staging app name
           publish-profile: ${{ secrets.STAGING_AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: './out'
 
@@ -76,6 +76,6 @@ jobs:
       - name: Deploy to Production
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'your-production-webapp-name'
+          app-name: 'Fitness' # Replace with your actual production app name
           publish-profile: ${{ secrets.PRODUCTION_AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: './out'
