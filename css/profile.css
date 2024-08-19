@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(assets/img/background_profile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #333;
+
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(174, 198, 212, 0.7); /* Your original background color with opacity */
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 40px; /* Set top margin */
+}
+.left-container {
+    flex: 1 1 60%;
+    min-width: 300px;
+    width: 70%;
+    background-color: #d8ecef;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right-container {
+    flex: 30%;
+    background-color: #d8ecef;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.left-container, .right-container {
+    background-color: rgba(216, 236, 239, 0.75); /* Slightly transparent */
+    /* ... other styles ... */
+}
+.left-container .info-item {
+    margin-top: auto; /* Pushes the button to the bottom of the container */
+}
+.info-item .button {
+    background-color: #007bff; /* Default button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin-top: auto; /* Pushes the button to the bottom if it’s inside a flex container */
+}
+.info-item .button:hover {
+    background-color: #ff4d4d; /* Red color on hover */
+}
+@media (max-width: 768px) {
+.left-container,
+.right-container {
+    flex: 1 1 100%;
+    }
+}
+.profile-header h1 {
+    font-size: 28px;
+    color: #2042d6;
+}
+.profile-tabs span {
+    font-size: 12px;
+    color: #999;
+    padding-bottom: 10px;
+}
+.profile-picture {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 5px solid #5d4bc5;
+}
+#profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.camera-icon {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background-color: #5d4bc5;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+}
+.profile-info {
+    width: 100%;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.info-item {
+    position: relative;
+}
+.info-item label {
+    display: block;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.info-item input, .info-item select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+.info-item input:focus, .info-item select:focus {
+    outline: none;
+    border-color: #5d4bc5;
+}
+.button {
+    align-self: center;
+    background-color: #5d4bc5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #4556a0;
+}
+.right-container h1 {
+    font-size: 28px;
+    color: #2042d6;
+}
+.circular-progress {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto 10px;
+}
+.steps-input {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circular-progress svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+.circular-progress circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 20;
+    stroke-linecap: round;
+}
+.circle-bg {
+    stroke: #ffffff;
+}
+.circle {
+    stroke: url(#gradient);
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    transition: stroke-dashoffset 0.5s ease;
+}
+.circular-progress .progress-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: #5f9ac7;
+}
+#icon-options {
+    display: none;
+    position: fixed; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 10px 10px 0 0; 
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 
+    bottom: 100; 
+    left: 60%;
+    transform: translateX(-50%);
+    width: 90%; 
+    max-width: 500px; 
+    z-index: 1000; 
+}
+#icon-options img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+#icon-options img:hover {
+    border-color: #5f9ac7;
+}
+.steps-input {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.steps-input input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.section {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.section h3 {
+    font-size: 20px;
+    color: #5d4bc5;
+    margin-bottom: 10px;
+}
+.section p {
+    font-size: 16px;
+    color: #555;
+}
+.quote {
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+}
+.water-intake, .workout-summary, .fitness-tip{
+    margin-bottom: 20px;
+}

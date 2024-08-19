@@ -1,0 +1,232 @@
+:root{
+    --light-color: #fff;
+    --dark-color: #2A4C65;
+    --header-height: 70px;
+    --search-height: 50px;
+    --border-color: #8E9AAB;
+    --hover-color: #1283ca;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: var(--light-color);
+}
+
+.container{
+    text-align: center;
+    height: cal(100vh - var(--header-height));
+}
+
+
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--search-height);
+    gap: 10px;
+    box-decoration-break: 0px 2px 8px 0px var(--border-color);
+}
+
+.search input[type="text"] {
+    padding: 8px 10px;
+    line-height: 1.5;
+    font-size: 1rem;
+    border: none;
+    border-left: 1px solid var(--border-color);
+    border-bottom: 1px solid transparent;
+    outline: none;
+    transition: all 200ms ease-in-out;
+    width: 60%;
+}
+
+.search input[type="text"]:focus{
+    border-left-color: transparent;
+    border-bottom-color: var(--border-color);
+    width: 61%;
+}
+
+.btn{ 
+    padding: 8px 10px;
+    background: transparent;
+    border-radius: 2px;
+    user-select: none;
+    font-size: 1rem;
+    border: 1px solid #35353F ;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #35353F !important;
+    border-color: var(--dark-color) !important;
+    color: var(--light-color) !important;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    margin-top: 10px;
+}
+
+.filters input[type="number"], .filters select {
+    padding: 6px 8px; 
+    font-size: 0.875rem; 
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#recipe-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.recipe{
+    height: 280px;
+    width: 250px;
+    padding: 4px;
+    box-shadow: 0px 0px 8px 2px var(--border-color);
+    margin: 20px;
+    transition: all 200ms ease-in-out;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.recipe-title{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.recipe-image{
+    height: 170px;  
+}
+
+.recipe-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.recipe-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.recipe-calories {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.instruction-btn {
+    padding: 4px 8px;
+    background-color: var(--dark-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 200ms ease-in-out;
+}
+
+.instruction-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.recipe-text{
+    height: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    margin-top: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    transform: scale(.8);
+    transform-origin: top left;
+}
+
+.recipe-text ul{
+    list-style-type:decimal;
+    list-style-position: inside;
+    text-align: left;
+    padding: 5px;
+}
+
+.recipe-text ul > li{
+    padding: 5px;
+}
+
+.recipe:hover .recipe-text{
+    height: 120px;
+    visibility: visible;
+    opacity: 1;
+    transform:scale(1);
+}
+
+.recipe:hover{
+    height: 420px;
+}
+
+.no-recipes-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #ff0000; 
+    padding: 20px;
+    border: 1px solid #ff0000; 
+    border-radius: 8px;
+    background-color: #ffe6e6; 
+    margin: 20px auto;
+    max-width: 600px; 
+}
+
+.hamburger-icon {
+    display: none; /*Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--dark-color);
+    padding: 0px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .hamburger-icon {
+        display: block; /* Show hamburger icon on mobile */
+        position: relative;
+    }
+
+    .filters {
+        display: none; /* Hide filters by default on mobile */
+        left: 0;
+        width: 100%;
+        background-color: #35353F;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .filters.show {
+        display: flex; /* Show filters when hamburger menu is clicked */
+        flex-direction: column;
+    }
+}
+
+
+  

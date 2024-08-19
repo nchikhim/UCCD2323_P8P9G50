@@ -1,0 +1,140 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 100px 20px 20px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-box {
+    width: 100%;
+    padding: 40px;
+    background: url('../assets/img/workout_1.webp') center/cover no-repeat;
+    position: relative;
+}
+
+.form-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: -1;
+}
+
+.form-box h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Cursive', sans-serif;
+    color: #333;
+    font-size: 2.5em;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"], 
+.form-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.form-box input[type="text"]:focus,
+.form-box input[type="email"]:focus, 
+.form-box input[type="password"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-box input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.form-box input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-box .checkbox {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.form-box .checkbox label {
+    font-size: 14px;
+    margin-left: 5px;
+    color: #333;
+}
+
+.form-box p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.form-box a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+#loading-icon {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loading-icon img {
+    width: 200px;
+    border-radius: 10%;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+}

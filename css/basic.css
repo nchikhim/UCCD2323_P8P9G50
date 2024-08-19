@@ -1,0 +1,245 @@
+/* ===============================================
+    Loader
+   ============================================== */
+   .loader_bg {
+    position: fixed;
+    z-index: 9999999;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loader img {
+    width: 400px;
+  }
+
+/* ===============================================
+    Navigation SideBar
+   ============================================== */
+
+   .custom_menu-btn {
+    z-index: 100000;
+    position: absolute;
+    right: 15px;
+    top: 7px;
+  }
+  
+  .custom_menu-btn button {
+    margin-top: 14px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .custom_menu-btn button span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #EFEBE0;
+    margin: 7px 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 5px;
+  }
+  
+  .menu_btn-style {
+    position: fixed;
+    right: 29px;
+    top: 7px;
+  }
+  
+  .custom_menu-btn .s-2 {
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    width: 22px;
+    margin-left: auto;
+  }
+  
+  .menu_btn-style button .s-1 {
+    -webkit-transform: rotate(45deg) translateY(16px);
+    transform: rotate(45deg) translateY(16px);
+  }
+  
+  .menu_btn-style button .s-2 {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  
+  .menu_btn-style button .s-3 {
+    -webkit-transform: rotate(-45deg) translateY(-16px);
+    transform: rotate(-45deg) translateY(-16px);
+  }
+  
+  .navOverlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1011;
+    top: 0;
+    right: 0;
+    background-color: #35353F;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border-radius: 30px;
+  }
+  
+  .navOverlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 60px;
+  }
+  
+  .navOverlay .overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: left;
+    margin-top: 60px;
+    margin-left: 3em;
+    margin-bottom: 10em;
+  }
+  
+  .menu_width {
+    width: 20%;
+  }
+  
+  @media (max-width: 1500px) {
+    .menu_width {
+      width: 28%;
+    }
+  }
+  
+  
+  @media (max-width: 1200px) {
+    .menu_width {
+      width: 30%;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .menu_width {
+      width: 35%;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .menu_width {
+      width: 40%;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .menu_width {
+      width: 48%;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .menu_width {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .menu_width {
+      width: 70%;
+    }
+  }
+  
+  .navOverlay .barlist li .icon {
+    width: 2rem;
+  }
+  
+  .navOverlay .barlist li {
+    list-style-type: none;
+  }
+  
+  .navOverlay .barlist a {
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    /* or display: inline; */
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 15px;
+    color: #EFEBE0;
+    -webkit-transition: 0.3s;
+    transition: transform 400ms cubic-bezier(0.51, 0.6, 0.54, 0.59);
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  
+  .navOverlay .barlist a:hover {
+    background-color: #EFEBE0;
+    color: #35353F;
+    padding-left: 1.5rem;
+    transform: translateX(1rem);
+    border-radius: 40px;
+  
+  }
+  
+  #navlogo {
+    width: 20px;
+    ;
+  }
+  
+  .barlist .active {
+    background-color: #3D6179;
+    color: #000;
+    padding-left: 1.5rem;
+    transform: translateX(1rem);
+    border-radius: 40px;
+  }
+  
+  /* ===============================================
+        Navigation Bar on Top
+       ============================================== */
+  .topnavbar {
+    border-bottom: none;
+    background-color: #35353F;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .topnavbar .navbar-brand {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+  }
+
+
+/* ===============================================
+    Footer
+   ============================================== */
+   footer {
+    position: relative;
+    width: 100%;
+    background: #211F19;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 0.75rem;
+  }

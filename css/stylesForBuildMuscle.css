@@ -1,0 +1,602 @@
+* {
+    box-sizing: border-box;
+}
+
+header h1{
+    color:#bdc3c7
+}
+
+main{
+    background-color: #152238;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img, iframe, video {
+    max-width: 100%;
+    height: auto;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Muscle Toning Section */
+.muscle-toning {
+    background-color: #eff2f4;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    margin: auto;
+    width: 90%;
+
+}
+
+.muscle-toning-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.muscle-toning-intro h2 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.muscle-toning-intro p {
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+.muscle-toning-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.muscle-toning-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.toning-card {
+    background-color: #ffffff;
+    border: 1px solid #bdc3c7;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 250px;
+    text-align: center;
+}
+
+.toning-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.toning-card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+}
+
+.toning-card p {
+    color: #7f8c8d;
+}
+
+.muscle-toning .btn-primary {
+    background-color: #152238;
+    border-color: #152238;
+    color: white;
+    transition: all 0.3s ease;
+    margin:auto;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+.card-body .btn {
+    margin-top: auto; 
+}
+
+
+.muscle-toning .btn-primary:hover {
+    background-color: #3b62a3; 
+}
+
+.muscle-toning-video {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%; 
+    margin: 0 auto; 
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .video-container {
+        padding-top: 56.25%; 
+    }
+
+    .video-container iframe {
+        height: 100%; 
+        width: 100%;
+    }
+}
+
+/* Large screens adjustment */
+@media screen and (min-width: 1200px) {
+    .video-container {
+        max-width: 100%; 
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .muscle-toning {
+        width: 95%;
+        padding: 1rem;
+    }
+}
+
+
+/* Strength Training Tips Section */
+.strength-training-tips {
+    background-color: #eff2f4; 
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.strength-training-tips h2 {
+    color: #2c3e50;
+}
+
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.tip-card {
+    background-color: #ffffff;
+    border: 1px solid #bdc3c7;
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 1 1 calc(50% - 1.5rem);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.workout-program {
+    background-image: url('img/background.jpg'); 
+    background-position: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.workout-program h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.workout-program p{
+    text-align: center;
+}
+
+.table-card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.table-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+}
+
+.header-container {
+    background-color: #E09132;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.table-container {
+    padding: 1rem;
+}
+
+.workout-plan th, .workout-plan td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.workout-plan th {
+    background-color: #E09132;
+    color: white;
+}
+
+.workout-plan td {
+    background-color: #f9f9f9;
+}
+
+.workout-plan tr {
+    transition: background-color 0.3s;
+}
+
+.workout-plan tr:hover {
+    background-color: #efefef;
+}
+
+.day-icon {
+    display: flex;
+    align-items: center;
+}
+
+.day-icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .workout-plan th, .workout-plan td {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+
+/* Featured Exercises Section */
+.exercise-cards {
+    text-align: center; 
+    padding: 2rem 0; 
+}
+
+.exercise-cards h2 {
+    color: white; 
+    margin: 0; 
+    padding: 1rem; 
+    font-size: 2rem; 
+}
+
+/* Carousel Container */
+#exerciseCarousel {
+    width: 90%; 
+    max-width: 1200px; 
+    margin:auto; 
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Carousel Inner */
+.carousel-inner {
+    width: 100%; 
+    max-width: 100%; 
+    display: flex; 
+    align-items: center; 
+}
+
+/* Carousel Item */
+.carousel-item {
+    position: relative;
+    width: 100%; 
+    padding-top: 56.25%; /* Aspect ratio for 16:9 */
+    overflow: hidden; 
+    height: 0; /* Set height to 0 and use padding to maintain aspect ratio */
+    display: flex; 
+    align-items: center;
+}
+
+.carousel-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    max-width: 100%; 
+    border-radius: 12px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff; 
+    border-radius: 8px; 
+    padding: 1rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 30%;
+    margin:auto;
+}
+
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    width: 40px; 
+    height: 40px;
+    top: 50%; 
+    transform: translateY(-50%);
+    z-index: 1050; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 50%; 
+    margin-top:250px;
+}
+
+.carousel-control-prev {
+    left: 0px; 
+}
+
+.carousel-control-next {
+    right: 0px; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px; 
+    height: 20px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #exerciseCarousel {
+        width: 100%; 
+        margin: 0; 
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 30px; 
+        height: 30px; 
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 15px; 
+        height: 15px; 
+    }
+
+    .carousel-item iframe {
+        height: 300px; 
+    }
+}
+
+
+
+/* Background for the section containing the feedback card */
+.feedback-background {
+    background-image: url('img/mountain.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 2rem; 
+    width: 100vw; 
+    height: auto; 
+    min-height: 100vh; 
+    box-sizing: border-box; 
+}
+
+/* Feedback Card Styling */
+.feedback-card {
+    background-color: #eff2f4;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: auto; 
+    max-width: 600px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.feedback-card h2 {
+    color: #2c3e50;
+    font-size: 2rem; 
+    margin-bottom: 1.5rem; 
+    text-align: center; 
+}
+
+.feedback-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-card label {
+    margin-top: 1rem;
+    font-size: 1.2rem; 
+}
+
+.feedback-card input,
+.feedback-card textarea,
+.feedback-card select {
+    margin-top: 0.5rem;
+    padding: 0.75rem; 
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    font-size: 1rem; 
+}
+
+.feedback-card input[type="submit"] {
+    background-color: #e67e22;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem; 
+    cursor: pointer;
+    font-size: 1.1rem; 
+    transition: background-color 0.3s ease;
+    width:35%;
+    margin:auto;
+}
+
+.feedback-card input[type="submit"]:hover {
+    background-color: #d35400;
+}
+
+/* Adjustments for screens with width 414px and height 896px */
+@media screen and (max-width: 414px) and (max-height: 896px) {
+
+    /* Muscle Toning Section */
+    .muscle-toning {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    .muscle-toning-intro h2 {
+        font-size: 2rem; /* Slightly smaller */
+    }
+
+    .muscle-toning-intro p {
+        font-size: 1rem; /* Slightly smaller */
+    }
+
+    .toning-card {
+        padding: 1rem;
+        max-width: 100%; /* Make cards full-width */
+        margin-bottom: 1rem; /* Add space between cards */
+    }
+
+    /* Video Container */
+    .video-container {
+        position: relative;
+        padding-top: 56.25%; /* Aspect ratio for 16:9 */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    /* Strength Training Tips Section */
+    .strength-training-tips {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    .tip-card {
+        padding: 1rem;
+        flex: 1 1 100%; /* Make tips full-width */
+    }
+
+    /* Workout Program */
+    .workout-program {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .table-card-wrapper {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .table-card {
+        max-width: 100%;
+    }
+
+    .workout-plan th, .workout-plan td {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+
+    /* Carousel Adjustments */
+    #exerciseCarousel {
+        width: 100%;
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 0;
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        overflow: hidden;
+    }
+
+    .carousel-item iframe {
+        height: 100%; /* Smaller height */
+        width: 100%; /* Ensure it uses the full width */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* Feedback Card */
+    .feedback-card {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .feedback-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .feedback-card input[type="submit"] {
+        width: 100%; /* Full-width button */
+    }
+}
