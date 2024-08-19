@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Calories Burnt Calculator</title>
+    <meta name="author" content="ChiKhim, XinRu, CoYing, KaiLing">
+    <meta name="description" content="Fitness Journey Website">
+    <meta name="keywords" content="Fitness, Lose weight, Muscle, Get toned, Nutrition, Wellness">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ================================================
+                CSS
+    ===================================================== -->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body class="sub_page">
+    <div class="area ">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+            </a>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/logo.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="LossWeight.html">Lose Weight</a></li>
+                    <li><a href="getToned.html">GetToned</a></li>
+                    <li><a href="buildMuscle.html">Build Muscle</a></li>
+                    <li><a href="Nutrition.html">Nutrition Recipes</a></li>
+                    <li><a href="wellnessRoutine.html">Wellness Tips</a></li>
+                    <li><a href="tools.html"  class="active">Tools</a></li>
+                    <li><a href="fitnessProfile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- ============== topshow Section ============== -->
+        <section>
+            <section class="topshow-wrap topshow-wrap-2"
+                style="background-image: url('assets/img/calculator1.jpg');"
+                data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-end">
+                        <div class="col-md-9 ftco-animate pb-5">
+                            <h1 class="blurred-background mb-0 bread">Fitness-Tools-CaloriesBurnt</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>        
+
+        <!-- ============== Infor Section ============== -->
+        <section class="infor">
+            <div class="container px-4 px-lg-5" style="margin-top: 4rem;">
+                <div class="row justify-content-center mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="featured-text text-center">
+                            <h4>Calories</h4>
+                            <br>
+                            <p class="text-black-50 mb-0">
+                                Our bodies consume calories even when we're not active, as energy is needed for vital functions like pumping blood, digesting food, and brain activity (which alone uses about 20% of our daily calories). 
+                                However, when we talk about burning calories, we often focus on the extra energy expended through exercise beyond our basal metabolic rate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== Calculator ============== -->
+        <section class="ftco-section container-fluid d-flex flex-column align-items-center justify-content-center"
+        style="padding-bottom: 10rem; padding-top: 4rem;">
+            <div class="calculator p-4 rounded">
+                <h1 class="text-center mb-4">Calories Burnt Calculator</h1>
+                <div class="form-group mb-3">
+                    <label for="activity" class="form-label">Select Activity:</label>
+                    <select id="activity" name="activity">
+                        <option value="3.9">Walking (3.5 mph)</option>
+                        <option value="9.8">Running (6 mph)</option>
+                        <option value="8.0">Cycling (12-14 mph)</option>
+                    </select>
+
+                    <br><br>
+                    <label for="weight" class="form-label">Enter your weight (kg):</label>
+                    <input type="number" id="weight" class="form-control" placeholder="Enter your weight in kilograms">
+                    
+                    <br>
+                    <label for="duration" class="form-label">Enter Duration (hours):</label>     
+                    <input type="number" id="duration" name="duration" placeholder="Enter duration in hours">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="calculateCaloriesBurnt()" class="btn btn-primary mx-2">Calculate</button>
+                    <button onclick="window.location.reload();" class="btn btn-secondary mx-2">Reset</button>
+                </div>
+                <p id="CalResult" class="text-center mt-4"></p>
+            </div>
+        </section>
+      
+        <!-- end calculator -->
+
+        <section class="information-section">
+            <b><u><h2>Calories Burnt</h2></u></b>
+            <h4>Although the above factors are the key factors used in the estimation of calories burned, there are other factors as well.</h4>
+            <ul>
+                <li><b>Age</b> —— this affects a person's resting energy expenditure. As a person ages, they tend to lose lean body mass, which tends to decrease metabolic activity. Thus, the older a person is, the fewer calories they burn overall. Therefore, given that the only difference between two people is that one is much older than the other, the older person will burn fewer calories.</li>
+                <li><b>Body composition</b> —— muscle requires more energy than fat. Thus, a person who is the same height and weight as another will burn more calories if they have more muscle.</li>
+                <li><b>Temperature</b> —— people burn more calories in warmer environments. This is because a higher temperature increases body temperature, allowing the body to direct energy towards calorie burn rather than warming the body.</li>
+                <li><b>Fitness level</b> —— this affects exercise intensity on an individual level. A person who is in better shape will burn fewer calories when performing the same exercise as someone who is at a lower level of fitness. This is because the body of the person who is in better shape is more efficient, so it uses less energy to perform the same task.</li>
+                <li><b>Diet</b> —— a person's diet affects their metabolism; the lower a person's metabolism the fewer calories they burn, so a person who wants to burn more calories should consume a diet that increases their metabolism.</li>
+                <li><b>Sleep</b> —— this can affect the number of calories burned in a few ways. A person who does not get enough sleep will be more fatigued, and may therefore exercise less than they otherwise would. Also, if a person does not get enough sleep, their metabolism can decrease, reducing the total number of calories burned.</li>
+            </ul>
+        </section>
+
+        <!--  ====================== FOOTER ====================== -->
+            <footer class="footer small text-center text-white-50">
+                <div class="container px-4 px-lg-5">
+                    <p>
+                        &copy; Fitness 2024 | All Rights Reserved
+                    </p>
+                </div>
+            </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ==========================================================
+                JavaScript
+        ========================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <!-- JS -->
+        <script src="js/scripts.js"></script>
+</body>
+</html>

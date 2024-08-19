@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Lose Weight</title>
+    <meta name="author" content="ChiKhim, XinRu, CoYing, KaiLing">
+    <meta name="description" content="Fitness Journey Website">
+    <meta name="keywords" content="Fitness, Lose weight, Muscle, Get toned, Nutrition, Wellness">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ================================================
+                CSS
+    ===================================================== -->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/loseWeight.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
+</head>
+
+<body class="sub_page">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+            </a>
+            <h3 class="navbar-brand text-white fs-2 fw-bold">Loss Weight</h3>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/logo.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#" class="active">Lose Weight</a></li>
+                    <li><a href="getToned.html">GetToned</a></li>
+                    <li><a href="buildMuscle.html">Build Muscle</a></li>
+                    <li><a href="Nutrition.html">Nutrition Recipes</a></li>
+                    <li><a href="wellnessRoutine.html">Wellness Tips</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="fitnessProfile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <main>
+        <div class="topContainer">
+
+            <div class="slideshow-container">
+                <div class = "mainfade"> 
+                    <img src="./assets/img/lw_main1.jpg" alt="running_loseWeight">
+                    <div class="bottom-left">
+                        <h2>Running</h2>
+                        <p>
+                        Improve cardiovascular health and boost overall fitness.<br>
+                        Maintain an upright posture, engage your core, and land midfoot.
+                        </p>
+                    </div>
+                </div>
+                <div class = "mainfade"> 
+                    <img src="./assets/img/lw_main2.jpeg" alt="swimming_loseWeight">
+                    <div class="bottom-left">
+                        <h2>Swimming</h2>
+                        <p>
+                        Low-impact, full-body workout for all fitness levels.<br>
+                        Keep your body streamlined, rotate your hips, and breathe rhythmically.
+                        </p>
+                    </div>
+                </div>
+                <div class = "mainfade"> 
+                    <img src="./assets/img/lw_main3.jpg" alt="dance_loseWeight">
+                    <div class="bottom-left">
+                        <h2>Dance</h2>
+                        <p>
+                        Burn calories while dancing to energetic music.<br>
+                        Keep your core engaged, stay light on your feet, and follow the instructor's lead.
+                        </p>
+                    </div>
+                </div>
+                <div class = "mainfade"> 
+                    <img src="./assets/img/lw_main4.jpg" alt="jumping_loseWeight">
+                    <div class="bottom-left">
+                        <h2>Jumping</h2>
+                        <p>
+                        High-intensity cardio for improved coordination and agility.<br>
+                        Keep your elbows close to your body, jump on the balls of your feet, and maintain a steady rhythm.
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    
+        <div class="bottomContainer">
+            <div class="icon">
+                <div class="exercise-icon" data-exercise="running">
+                    <img src="./assets/img/runningE.jpg" alt="Running icon">
+                    <h3>RUNNING</h3>
+                </div>
+                <div class="exercise-icon" data-exercise="swimming">
+                    <img src="./assets/img/swimming.png" alt="Swimming icon">
+                    <h3>SWIMMING</h3>
+                </div>
+                <div class="exercise-icon" data-exercise="zumbaDance">
+                    <img src="./assets/img/dancing.png" alt="Zumba Dance icon">
+                    <h3>ZUMBA DANCE</h3>
+                </div>
+                <div class="exercise-icon" data-exercise="jumpingRope">
+                    <img src="./assets/img/jumpingRope.jpg" alt="Jumping Rope icon">
+                    <h3>JUMPING ROPE</h3>
+                </div>
+            </div>
+        </div>
+
+        <section id="content-area">
+            
+        </section>
+        </main>
+        
+
+         <!--  ====================== FOOTER ====================== -->
+        <footer class="footer small text-center text-white-50">
+            <div class="container px-4 px-lg-5">
+                <p>
+                    &copy; Fitness 2024 | All Rights Reserved
+                </p>
+            </div>
+        </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ================================================
+                JavaScript
+        ===================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <!-- JS -->
+        <script src="js/lossWeight.js"></script>
+        <script src="js/scripts.js"></script>
+</body>
+
+</html>

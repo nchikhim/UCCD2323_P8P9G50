@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Nutrition</title>
+    <meta name="author" content="ChiKhim, XinRu, CoYing, KaiLing">
+    <meta name="description" content="Fitness Journey Website">
+    <meta name="keywords" content="Fitness, Lose weight, Muscle, Get toned, Nutrition, Wellness">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ================================================
+                CSS
+    ===================================================== -->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/fitRecipe.css"/>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        
+</head>
+
+<body class="sub_page">
+    <div class="area ">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <header>
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+            </a>
+
+            <div class="container-fluid">
+                <a class="navbar-brand text-white fs-2 fw-bold">Nutrition</a>
+            </div>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1"></span>
+                    <span class="s-2"></span>
+                    <span class="s-3"></span>
+                </button>
+            </div>
+        </nav>
+        
+        
+</header>
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/logo.png" alt="logo" class="navlogo" width="250rem" style="padding-bottom: 20px;" />
+                <ul class="barlist">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="LossWeight.html">Lose Weight</a></li>
+                    <li><a href="getToned.html">GetToned</a></li>
+                    <li><a href="buildMuscle.html">Build Muscle</a></li>
+                    <li><a href="#" class="active">Nutrition Recipes</a></li>
+                    <li><a href="wellnessRoutine.html">Wellness Tips</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="fitnessProfile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        
+        <br><br><br><br><br>
+<main>
+         
+            <div class="search mt-lg-0 pt-lg-0 mt-md-4 pt-md-4 mt-4 pt-4">
+                <input type="text" id="txtSearch" placeholder="Search here" autofocus>
+                <button class="btn">Find</button>
+                <div class="hamburger-icon" onclick="toggleMenu()">☰</div>
+            </div>
+    
+            <div class="filters" id="filter-container">
+                <input type="number" id="caloriesMin" placeholder="Min Calories" min="0">
+                <input type="number" id="caloriesMax" placeholder="Max Calories" min="0">
+                <select id="diet">
+                    <option value="">All Diets</option>
+                    <option value="balanced">Balanced</option>
+                    <option value="high-protein">High Protein</option>
+                    <option value="low-fat">Low Fat</option>
+                    <option value="low-carb">Low Carb</option>
+                </select>
+                <select id="allergies">
+                    <option value="">Any Allergies</option>
+                    <option value="dairy-free">Dairy</option>
+                    <option value="fish-free">Fish</option>
+                    <option value="pork-free">Pork</option>
+                    <option value="shellfish-free">Shellfish</option>
+                    <option value="egg-free">Egg</option>
+                    <option value="soy-free">Soy</option>
+                    <option value="wheat-free">Wheat</option>
+                </select>
+            </div>
+        
+            <div id="recipe-container"></div>
+        
+    </main>
+        <!--  ====================== FOOTER ====================== -->
+        <footer class="footer small text-center text-white-50">
+            <div class="container px-4 px-lg-5">
+                <p>&copy; Fitness 2024 | All Rights Reserved</p>
+            </div>
+        </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ================================================
+                JavaScript
+        ===================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <!-- JS -->
+        <script src="js/scripts.js" defer></script>
+        <script src="js/fitRecipe.js" defer></script>
+    </div>
+</body>
+</html>

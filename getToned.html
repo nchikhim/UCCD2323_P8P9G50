@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Get Toned</title>
+    <meta name="author" content="ChiKhim, XinRu, CoYing, KaiLing">
+    <meta name="description" content="Fitness Journey Website">
+    <meta name="keywords" content="Fitness, Lose weight, Muscle, Get toned, Nutrition, Wellness">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ================================================
+                CSS
+    ===================================================== -->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/basic.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/stylesForGetToned.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF3Uakwa-o7-tabbffla7KKHBXcb4yvSM&libraries=places&callback=initMap" async defer></script>          
+
+</head>
+
+<body class="sub_page">
+    <div class="area ">
+
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+            </a>
+            <a class="navbar-brand text-white fs-2 fw-bold" href="#">Get Toned</a>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/logo.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="LossWeight.html">Lose Weight</a></li>
+                    <li><a href="#"  class="active">GetToned</a></li>
+                    <li><a href="buildMuscle.html">Build Muscle</a></li>
+                    <li><a href="Nutrition.html">Nutrition Recipes</a></li>
+                    <li><a href="wellnessRoutine.html">Wellness Tips</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="fitnessProfile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <main>
+            <br/><br/><div class="muscle-toning">
+                <h2>Know your body. Nail your workout.</h2>
+                <p>Want to tone up? Discover a library of energizing workouts led by expert trainers and leading fitness brands like Alo Moves and Obé.¹</p>
+                
+                <h2>Keys to Muscle Toning</h2>
+                <p>Strength training to tone your muscles is more similar to building muscle than you would think. You might even opt to switch between the two goals from time to time. When you want to tone your muscles, ensure you take actions like:</p>
+                
+                <br/><br/>
+                <div class="toning-cards">
+                    <div class="toning-card">
+                        <h3>Regular Weight Lifting</h3>
+                        <p>Doing regular weight lifting training with light to medium weights and high reps.</p>
+                    </div>
+                    <div class="toning-card">
+                        <h3>Prioritize Cardio</h3>
+                        <p>Prioritizing cardio to reduce body fat.</p>
+                    </div>
+                    <div class="toning-card">
+                        <h3>Manage Strength Training</h3>
+                        <p>Cutting back on strength training workouts when you become bulkier than you prefer.</p>
+                    </div>
+                    <div class="toning-card">
+                        <h3>Balanced Nutrition</h3>
+                        <p>Eating enough calories to enable toning but not enough to amass fat.</p>
+                    </div>
+                </div><br/><br/>
+                <p>When toning your muscles, your ultimate goal is to build lean muscle and not gain excess fat. This process will increase your muscle definition and help you achieve a leaner physique. It's common for people to eat in a calorie deficit when they have goals for muscle toning because the deficit supports fat loss, and when it's paired with light resistance training, it helps you gain toned muscles and appearance.</p>
+            </div>
+            
+            
+            
+            <section>
+            <div class="table-card-wrapper">
+                <div class="table-card">
+                    <div class="table-container">
+                        <h2>Weekly Workout Plan</h2>
+                    </div>
+                    <div class="content-container">
+                        <div class="table-container">
+                            <table class="workout-plan">
+                                <thead>
+                                    <tr>
+                                        <th>Day</th>
+                                        <th>Workout</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Monday</td>
+                                        <td>Upper Body Strength</td>
+                                        <td>Focus on arms, shoulders, and chest with weight lifting exercises.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tuesday</td>
+                                        <td>Cardio</td>
+                                        <td>30 minutes of running or cycling to improve cardiovascular health.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wednesday</td>
+                                        <td>Lower Body Strength</td>
+                                        <td>Work on legs and glutes with exercises like squats and lunges.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thursday</td>
+                                        <td>Rest or Yoga</td>
+                                        <td>Recovery day with optional light yoga or stretching.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday</td>
+                                        <td>Full Body Workout</td>
+                                        <td>Combine exercises from both upper and lower body routines.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td>Cardio and Core</td>
+                                        <td>Focus on cardio followed by abdominal exercises.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sunday</td>
+                                        <td>Rest</td>
+                                        <td>Complete rest to recover and prepare for the next week.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+            
+
+            <section class="exercise-cards slider">
+                <!-- Card 1 -->
+                <div class="exercise-card card">
+                    <video src="assets/img/squats.mp4" alt="Squats" controls></video>
+                    <h3>Squats</h3>
+                    <p>Strengthens legs and glutes effectively.</p>
+                </div>
+            
+                <!-- Card 2 -->
+                <div class="exercise-card card">
+                    <video src="assets/img/lunges.mp4" alt="Lunges" controls></video>
+                    <h3>Lunges</h3>
+                    <p>Enhances leg strength and stability.</p>
+                </div>
+            
+                <!-- Card 3 -->
+                <div class="exercise-card card">
+                    <video src="assets/img/plank.mp4" alt="Planks" controls></video>
+                    <h3>Planks</h3>
+                    <p>Builds core strength and endurance.</p>
+                </div>
+            
+                <!-- Card 4 -->
+                <div class="exercise-card card">
+                    <video src="assets/img/burpees.mp4" alt="Burpees" controls></video>
+                    <h3>Burpees</h3>
+                    <p>Full-body workout for strength and endurance.</p>
+                </div>
+            </section><br/><br/><br/>
+            
+            <h1>Nearby Gyms</h1>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        
+            <br/><br/><section class="feedback-card">
+                <h2>We Appreciate Your Feedback</h2>
+                <form id="feedback-form" method="post">
+                     <label for="name">Name:</label>
+                     <input type="text" id="name" name="name" required>
+                
+                     <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="feedback">Feedback:</label>
+                     <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                
+                      <label for="rating">Rate Our Service:</label>
+                      <select id="rating" name="rating" required>
+                         <option value="excellent">Excellent</option>
+                         <option value="good">Good</option>
+                            <option value="average">Average</option>
+                         <option value="poor">Poor</option>
+                      </select><br/><br/>
+                
+                    <input type="submit" value="Submit">
+                </form>
+            </section>  
+          </main>
+         
+
+
+        <!--  ====================== FOOTER ====================== -->
+            <footer class="footer small text-center text-white-50">
+                <div class="container px-4 px-lg-5">
+                    <p>
+                        &copy; Fitness 2024 | All Rights Reserved
+                    </p>
+                </div>
+            </footer>
+        <!-- END OF FOOTER -->
+    </div>
+
+        <!-- ================================================
+                JavaScript
+        ===================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <!-- JS -->
+        <script src="js/scripts.js"></script>
+        <script src="js/getToned.js"></script>
+</body>
+</html>
+

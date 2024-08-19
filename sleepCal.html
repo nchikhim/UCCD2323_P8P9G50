@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sleep Calculator</title>
+    <meta name="author" content="ChiKhim, XinRu, CoYing, KaiLing">
+    <meta name="description" content="Fitness Journey Website">
+    <meta name="keywords" content="Fitness, Lose weight, Muscle, Get toned, Nutrition, Wellness">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ================================================
+                CSS
+    ===================================================== -->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body class="sub_page">
+    <div class="area ">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+        
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+            </a>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/logo.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="LossWeight.html">Lose Weight</a></li>
+                    <li><a href="getToned.html">GetToned</a></li>
+                    <li><a href="buildMuscle.html">Build Muscle</a></li>
+                    <li><a href="Nutrition.html">Nutrition Recipes</a></li>
+                    <li><a href="wellnessRoutine.html">Wellness Tips</a></li>
+                    <li><a href="tools.html" class="active">Tools</a></li>
+                    <li><a href="fitnessProfile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ============== topshow Section ============== -->
+        <section>
+            <section class="topshow-wrap topshow-wrap-2"
+                style="background-image: url('assets/img/calculator1.jpg');"
+                data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-end">
+                        <div class="col-md-9 ftco-animate pb-5">
+                            <h1 class="blurred-background mb-0 bread">Fitness-Tools-Sleep</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>        
+
+        <!-- ============== Infor Section ============== -->
+        <section class="infor">
+            <div class="container px-4 px-lg-5" style="margin-top: 4rem;">
+                <div class="row justify-content-center mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="featured-text text-center">
+                            <h4>Sleep</h4>
+                            <br>
+                            <p class="text-black-50 mb-0">
+                                Sleep is crucial for health and well-being. The amount of sleep you need varies with age.
+                                How much sleep you need changes throughout your lifetime. 
+                                Sleep guidelines can offer a place to start determining your sleep needs by providing research-backed recommendations for the ideal amount of sleep for optimal health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== Calculator ============== -->
+        <section class="ftco-section container-fluid d-flex flex-column align-items-center justify-content-center"
+        style="padding-bottom: 10rem; padding-top: 4rem;">
+            <div class="calculator p-4 rounded">
+                <h1 class="text-center mb-4">Sleep Duration Calculator</h1>
+                <div class="form-group mb-3">
+                    <label for="age" class="form-label">Enter your age:</label>
+                    <br>
+                    <label for="year" class="form-label">Years:</label>
+                    <input type="number" id="year" class="form-control" min="0" placeholder="Please enter positive value">
+                    <label for="month" class="form-label">Months:</label>
+                    <input type="number" id="month" class="form-control" max="11" min="0" placeholder="Please enter value (0 to 11)">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="calculateSleep()" class="btn btn-primary mx-2">Calculate</button>
+                    <button onclick="window.location.reload();" class="btn btn-secondary mx-2">Reset</button>
+                </div>
+                <p id="CalResult" class="text-center mt-4"></p>
+            </div>
+        </section>
+      
+        <!-- end calculator -->
+
+        <section class="information-section">
+            <u><b><h2>Sleep Duration</h2></b></u>
+            
+            <br>
+            <h5>
+                Sleep needs can still vary within the same age group.
+                The thing to keep in mind is how you feel when you get various amounts of sleep.
+                Here are a few questions to consider when evaluating your sleep needs:
+            </h5>
+            <ul>
+                <li>Do I feel rested after 7 hours of sleep, or do I need at least 8 or 9?</li>
+                <li>Do I experience any daytime drowsiness?</li>
+                <li>Do I rely on caffeine to keep me going throughout the day?</li>
+                <li>Has my sleeping partner noticed me tossing and turning or having any sleep issues during the night?</li>
+            </ul>
+
+            <br>
+            <h5>Bedtimes are based on:</h5>
+            <ul>
+                <li>your wake-up time</li>
+                <li>completing five or six 90-minute sleep cycles</li>
+                <li>allowing 15 minutes to fall asleep</li>
+            </ul>
+        </section>
+
+        <!--  ====================== FOOTER ====================== -->
+            <footer class="footer small text-center text-white-50">
+                <div class="container px-4 px-lg-5">
+                    <p>
+                        &copy; Fitness 2024 | All Rights Reserved
+                    </p>
+                </div>
+            </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ==========================================================
+                JavaScript
+        ========================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+        <!-- JS -->
+        <script src="js/scripts.js"></script>
+        <!-- Custom JS -->
+        <script>           
+            /* ===============================================
+            Sleep Calculator
+            ============================================== */
+            function calculateSleep() {
+                const year = parseInt(document.getElementById('year').value);
+                const month = parseInt(document.getElementById('month').value);
+
+                if (isNaN(year) || isNaN(month) || year < 0 || month < 0 || month > 11) {
+                    alert('Please enter valid values for age.');
+                    return;
+                }
+
+                const duration = getSleepDuration(year, month);
+
+                document.getElementById('CalResult').innerHTML = `Recommended sleep duration: ${duration} hours.`;
+            }
+
+            function getSleepDuration(year, month) {
+                if (year == 0){
+                    if(month <= 3){
+                        return '14 to 17';
+                    }else if(month <= 11){
+                        return '12 to 16';
+                    }
+                }else {
+                    if(month > 0){
+                        year += 1;
+                    }
+                    if(year <= 2){
+                        return '11 to 14';
+                    }else if(year <= 5){
+                        return '10 to 13';
+                    }else if(year <= 12){
+                        return '9 to 12';
+                    }else if(year <= 18){
+                        return '8 to 10';
+                    }else if(year <= 64){
+                        return '7 to 9';
+                    }else{
+                        return '7 to 8';
+                    }
+                }
+            }
+        </script>
+</body>
+</html>

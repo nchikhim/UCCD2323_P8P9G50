@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BMI Calculator</title>
+    <meta name="author" content="ChiKhim, XinRu, CoYing, KaiLing">
+    <meta name="description" content="Fitness Journey Website">
+    <meta name="keywords" content="Fitness, Lose weight, Muscle, Get toned, Nutrition, Wellness">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ================================================
+                CSS
+    ===================================================== -->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body class="sub_page">
+    <div class="area ">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+            </a>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/logo.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="LossWeight.html">Lose Weight</a></li>
+                    <li><a href="getToned.html">GetToned</a></li>
+                    <li><a href="buildMuscle.html">Build Muscle</a></li>
+                    <li><a href="Nutrition.html">Nutrition Recipes</a></li>
+                    <li><a href="wellnessRoutine.html">Wellness Tips</a></li>
+                    <li><a href="tools.html"  class="active">Tools</a></li>
+                    <li><a href="fitnessProfile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- ============== topshow Section ============== -->
+        <section>
+            <section class="topshow-wrap topshow-wrap-2"
+                style="background-image: url('assets/img/calculator1.jpg');"
+                data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-end">
+                        <div class="col-md-9 ftco-animate pb-5">
+                            <h1 class="blurred-background mb-0 bread">Fitness-Tools-BMI</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>        
+
+        <!-- ============== Infor Section ============== -->
+        <section class="infor">
+            <div class="container px-4 px-lg-5" style="margin-top: 4rem;">
+                <div class="row justify-content-center mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="featured-text text-center">
+                            <h4>Body Mass Index(BMI)</h4>
+                            <br>
+                            <p class="text-black-50 mb-0">
+                                BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. 
+                                It is widely used as a general indicator of whether a person has a healthy body weight for their height. 
+                                Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between. 
+                                These ranges of BMI vary based on factors such as region and age, and are sometimes further divided into subcategories such as severely underweight or very severely obese. 
+                                Being overweight or underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether any additional testing or action is required.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== Calculator ============== -->
+        <section class="ftco-section container-fluid d-flex flex-column align-items-center justify-content-center"
+        style="padding-bottom: 10rem; padding-top: 4rem;">
+            <div class="calculator p-4 rounded">
+                <h1 class="text-center mb-4">BMI Calculator</h1>
+                <div class="form-group mb-3">
+                    <label for="weight" class="form-label">Enter your weight (kg):</label>
+                    <input type="number" id="weight" class="form-control" placeholder="Enter your weight in kilograms">
+                    <br>
+                    <label for="height" class="form-label">Enter your height (cm):</label>
+                    <input type="number" id="height" class="form-control" placeholder="Enter your height in centimeters">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="calculateBMI()" class="btn btn-primary mx-2">Calculate</button>
+                    <button onclick="window.location.reload();" class="btn btn-secondary mx-2">Reset</button>
+                </div>
+                <p id="CalResult" class="text-center mt-4"></p>
+            </div>
+        </section>
+      
+        <!-- end calculator -->
+
+        <section class="information-section">
+            <b><h2>BMI chart</h2></b>
+            <h4>This is a graph of BMI categories based on the World Health Organization data. 
+                The dashed lines represent subdivisions within a major categorization.</h4>
+            <div class="container px-4 px-lg-5 d-flex justify-content-center">
+                <img src="assets/img/bmi-chart-adult.jpg" alt="Fitness" id="bmichart">
+            </div>
+        </section>
+
+        <!--  ====================== FOOTER ====================== -->
+            <footer class="footer small text-center text-white-50">
+                <div class="container px-4 px-lg-5">
+                    <p>
+                        &copy; Fitness 2024 | All Rights Reserved
+                    </p>
+                </div>
+            </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ==========================================================
+                JavaScript
+        ========================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <!-- JS -->
+        <script src="js/scripts.js"></script>
+        <!-- Custom JS -->
+        <script>
+           /* ===============================================
+            BMI Calculatur
+            ============================================== */
+            function calculateBMI() {
+                const weight = parseFloat(document.getElementById('weight').value);
+                const height = parseFloat(document.getElementById('height').value);
+
+                if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+                    alert('Please enter valid values for weight and height.');
+                    return;
+                }
+
+                const bmi = calculateBMIValue(weight, height);
+                const category = getBMICategory(bmi);
+            
+                document.getElementById('CalResult').innerHTML = `BMI: ${bmi.toFixed(2)} (${category}.)`;
+            }
+
+            function calculateBMIValue(weight, height) {
+                return weight / ((height / 100) ** 2);
+            }
+
+            function getBMICategory(bmi) {
+                if (bmi < 16) {
+                    return 'Severe Thinness';
+                } else if (bmi >= 16 && bmi < 17) {
+                    return 'Moderate Thinness';
+                } else if (bmi >= 17 && bmi < 18.5) {
+                    return 'Mild Thinness';
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    return 'Normal';
+                } else if (bmi >= 25 && bmi < 30) {
+                    return 'Overweight';
+                } else if (bmi >= 30 && bmi < 35) {
+                    return 'Obese Class I';
+                } else if (bmi >= 35 && bmi < 40) {
+                    return 'Obese Class II';
+                } else {
+                    return 'Obese Class III';
+                }
+            }
+        </script>
+</body>
+</html>

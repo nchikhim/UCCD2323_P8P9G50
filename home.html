@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fitness</title>
+    <meta name="author" content="ChiKhim, XinRu, CoYing, KaiLing">
+    <meta name="description" content="Fitness Journey Website">
+    <meta name="keywords" content="Fitness, Lose weight, Muscle, Get toned, Nutrition, Wellness">
+    <link rel="icon" href="assets/img/logo/logo.png">
+
+    <!-- ================================================
+                CSS
+    ===================================================== -->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+
+<body id="page-top">
+    <!-- ============== Loader ============== -->
+    <div class="loader_bg">
+        <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+    </div>
+
+    <!-- ============== Navigation Bar ============== -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top">
+                <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Drop Down Buttons-->
+                    <div class="nav-item" id="navDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Exercise
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="LossWeight.html">Lose Weight</a></li>
+                                    <li><a class="dropdown-item" href="buildMuscle.html">Build Muscle</a></li>
+                                    <li><a class="dropdown-item" href="getToned.html">Get Toned</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item"><a class="nav-link" href="Nutrition.html">Nutrition</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wellnessRoutine.html">Wellness Routine</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools.html">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fitnessProfile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============== topshow Section ============== -->
+    <section>
+        <section class="topshow-wrap topshow-wrap-2"
+            style="background-image: url('assets/img/bg-home.jpg');"
+            data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row no-gutters slider-text align-items-end">
+                    <div class="col-md-9 ftco-animate pb-5">
+                        <h1 class="blurred-background mb-0 bread">Fitness-Home</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section> 
+
+    <!-- ============== Infor Section ============== -->
+    <section class="infor">
+        <div class="container px-4 px-lg-5" style="margin-top: 4rem;">
+            <div class="row justify-content-center mb-4 mb-lg-5">
+                <div class="col-xl-8 col-lg-8">
+                    <div class="featured-text text-center">
+                        <h4>Welcome back,</h4>
+                        <h1><span id="username-display"></span></h1>
+                        <br>
+                        <p class="text-black-50 mb-0">Wishing you success in achieving your goals and a life full of health and wellness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== Service ============== -->
+    <!-- Service Section -->
+    <section class="ftco-section container-fluid d-flex flex-column align-items-center justify-content-center"
+        style="padding-bottom: 10rem; padding-top: 4rem;">
+        <div class="container">
+            <div class="container-fluid align-items-center text-center mb-lg-5">
+                <h2 class="text-black mb-5">
+                    Our Services
+                </h2>
+            </div>
+            <div class="row mb-5 pb-5">
+                <!-- Lose Weight -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">    
+                    <a href="LossWeight.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                        <div class="media-body p-4">           
+                            <h3 class="heading">Lose Weight</h3>           
+                            <p>Develop a customized weight loss plan that fits your lifestyle and goals. Access tailored workout routines and nutrition advice specifically designed to help you shed pounds effectively.</p>       
+                        </div>   
+                    </a>
+                </div>
+
+                <!-- Get Toned -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <a href="getToned.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                        <div class="media-body p-4">
+                            <h3 class="heading">Get Toned</h3>
+                            <p>Achieve a lean, defined physique with targeted exercises and strategies. Our programs are specifically designed to tone your body and enhance your fitness journey.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Build Muscle -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <a href="buildMuscle.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                        <div class="media-body p-4">
+                            <h3 class="heading">Build Muscle</h3>
+                            <p>Focus on building strength and muscle mass with detailed, personalized workout plans. Our routines guide you through exercises that maximize your gains.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4">
+                <!-- Nutrition Recipes -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <a href="Nutrition.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                        <div class="media-body p-4">
+                            <h3 class="heading">Nutrition Recipes</h3>
+                            <p>Discover a wide range of nutritious and delicious recipes to support your fitness goals. Our healthy recipes are crafted to provide the energy and nutrients you need.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Wellness Tips -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <a href="wellnessRoutine.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                        <div class="media-body p-4">
+                            <h3 class="heading">Wellness Tips</h3>
+                            <p>Receive expert wellness tips that support your overall health. From managing stress to improving sleep, our advice helps you stay balanced and healthy.</p>
+                        </div>
+                    </a>
+                </div>                
+                <!-- Tools -->
+                <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                    <a href="tools.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                        <div class="media-body p-4">
+                            <h3 class="heading">Tools</h3>
+                            <p>Track your progress with our advanced fitness tools. Monitor key metrics such as BMI, calorie intake, and activity levels to stay on top of your fitness journey.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end services -->
+
+    <!--  ====================== FOOTER ====================== -->
+    <footer class="footer small text-center text-white-50">
+        <div class="container px-4 px-lg-5">
+            <div class="footer-left">
+                <a class="navbar-brand" href="#page-top">
+                    <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+                </a>
+            </div>
+            <div class="footer-right">
+                <p class="footer-links">
+                    <span>&copy; Fitness 2024 | All Rights Reserved</span>
+                </p>
+            </div>
+        </div>
+    </footer>       
+    <!-- END OF FOOTER -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+
+            function displayUsername() {
+                const usernameDisplay = document.getElementById('username-display');
+                
+                if (usernameDisplay) {
+                    // Get the username from cookies
+                    const username = getCookie('username');
+                    
+                    // Display the username if found
+                    if (username) {
+                        usernameDisplay.textContent = username;
+                    } else {
+                        usernameDisplay.textContent = 'Guest'; // Default text if no username is found
+                    }
+                }
+            }
+
+            // Call the function to display the username
+            displayUsername();
+        });
+    </script>
+</body>
+</html>

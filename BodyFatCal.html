@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Body Fat Calculator</title>
+    <meta name="author" content="ChiKhim, XinRu, CoYing, KaiLing">
+    <meta name="description" content="Fitness Journey Website">
+    <meta name="keywords" content="Fitness, Lose weight, Muscle, Get toned, Nutrition, Wellness">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ================================================
+                CSS
+    ===================================================== -->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body class="sub_page">
+    <div class="area ">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+            </a>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/logo.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="LossWeight.html">Lose Weight</a></li>
+                    <li><a href="getToned.html">GetToned</a></li>
+                    <li><a href="buildMuscle.html">Build Muscle</a></li>
+                    <li><a href="Nutrition.html">Nutrition Recipes</a></li>
+                    <li><a href="wellnessRoutine.html">Wellness Tips</a></li>
+                    <li><a href="tools.html"  class="active">Tools</a></li>
+                    <li><a href="fitnessProfile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- ============== topshow Section ============== -->
+        <section>
+            <section class="topshow-wrap topshow-wrap-2"
+                style="background-image: url('assets/img/calculator1.jpg');"
+                data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-end">
+                        <div class="col-md-9 ftco-animate pb-5">
+                            <h1 class="blurred-background mb-0 bread">Fitness-Tools-BodyFat</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>        
+
+        <!-- ============== Infor Section ============== -->
+        <section class="infor">
+            <div class="container px-4 px-lg-5" style="margin-top: 4rem;">
+                <div class="row justify-content-center mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="featured-text text-center">
+                            <h4>Body Fat</h4>
+                            <br>
+                            <p class="text-black-50 mb-0">
+                                Body fat percentage is a key indicator of good health. A high body fat percentage may put you at a higher risk of lifestyle diseases. 
+                                Males are advised to maintain their body fat level at 15% or lower, while females are advised to maintain their body fat level at 25% or lower.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== Calculator ============== -->
+        <section class="ftco-section container-fluid d-flex flex-column align-items-center justify-content-center"
+        style="padding-bottom: 10rem; padding-top: 4rem;">
+            <div class="calculator p-4 rounded">
+                <h1 class="text-center mb-4">Body Fat Calculator</h1>
+                <div class="form-group mb-3">
+                    <label for="gender" class="form-label">Gender :</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <br><br>
+                    <label for="age" class="form-label">Enter your age:</label>
+                    <input type="number" id="age" class="form-control">
+                    
+                    <label for="weight" class="form-label">Enter your weight (kg):</label>
+                    <input type="number" id="weight" class="form-control">
+                    
+                    <label for="height" class="form-label">Enter your height (cm):</label>
+                    <input type="number" id="height" class="form-control">
+                    
+                    <label for="neck" class="form-label">Enter your neck size (cm):</label>
+                    <input type="number" id="neck" class="form-control">
+                    
+                    <label for="waist" class="form-label">Enter your waist size (cm):</label>
+                    <input type="number" id="waist" class="form-control">
+                    
+                    <label for="hip" class="form-label">Enter your hip size (cm):</label>
+                    <input type="number" id="hip" class="form-control">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button onclick="calculateBodyFat()" class="btn btn-primary mx-2">Calculate</button>
+                    <button onclick="window.location.reload();" class="btn btn-secondary mx-2">Reset</button>
+                </div>
+                <p id="CalResult" class="text-center mt-4"></p>
+            </div>
+        </section>
+      
+        <!-- end calculator -->
+
+        <section class="information-section">
+            <u><b><h2>Body Fat</h2></b></u>
+            
+            <br>
+            <h5>
+                There are many specific techniques used for measuring body fat. 
+                The calculator above uses a method involving equations developed at the Naval Health Research Center by Hodgdon and Beckett in 1984. 
+                The method for measuring the relevant body parts as well as the specific equations used are provided below:
+            </h5>
+            <ul>
+                <li>Measure the circumference of the subject's waist at a horizontal level around the navel for men, and at the level with the smallest width for women. Ensure that the subject does not pull their stomach inwards to obtain accurate measurements.</li>
+                <li>Measure the circumference of the subject's neck starting below the larynx, with the tape sloping downward to the front. The subject should avoid flaring their neck outwards.</li>
+                <li>For women only: Measure the circumference of the subject's hips at the largest horizontal measure.</li>
+                <li>Has my sleeping partner noticed me tossing and turning or having any sleep issues during the night?</li>
+            </ul>
+
+            <br>
+            <div class="container px-4 px-lg-5 d-flex justify-content-center">
+                <img src="assets/img/bodyFat.jpg" alt="Fitness" id="bmichart">
+            </div>
+        </section>
+
+        <!--  ====================== FOOTER ====================== -->
+            <footer class="footer small text-center text-white-50">
+                <div class="container px-4 px-lg-5">
+                    <p>
+                        &copy; Fitness 2024 | All Rights Reserved
+                    </p>
+                </div>
+            </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ==========================================================
+                JavaScript
+        ========================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <!-- JS -->
+        <script src="js/scripts.js"></script>
+        <!-- Custom JS -->
+        <script>
+            /* ===============================================
+            Body Fat Calculator
+            ============================================== */
+            function calculateBodyFat() {
+                const gender = document.querySelector('select[name="gender"]').value;
+                const age = parseInt(document.getElementById("age").value);
+                const weight = parseFloat(document.getElementById("weight").value);
+                const height = parseFloat(document.getElementById("height").value);
+                const neck = parseFloat(document.getElementById("neck").value);
+                const waist = parseFloat(document.getElementById("waist").value);
+                const hip = parseFloat(document.getElementById("hip").value);
+
+                // Validate input
+                if (
+                isNaN(age) ||
+                isNaN(weight) ||
+                isNaN(height) ||
+                isNaN(neck) ||
+                isNaN(waist) ||
+                isNaN(hip) ||
+                age <= 0 ||
+                weight <= 0 ||
+                height <= 0 ||
+                neck <= 0 ||
+                waist <= 0 ||
+                hip <= 0 ||
+                waist <= neck
+            ) {
+                alert("Please enter valid values for Age, Weight, Height, Neck/Waist/Hip size");
+                return;
+            }
+
+            // Calculate body fat result
+            let bodyfatresult = 0;
+            let denominator;
+
+            // BMI method to calculate body fat percentage
+            if (gender === "male") {
+                denominator =
+                1.0324 -
+                0.19077 * Math.log10(waist - neck) +
+                0.15456 * Math.log10(height);
+                } else if (gender === "female") {
+                    denominator =
+                    1.29579 -
+                    0.35004 * Math.log10(waist + hip - neck) +
+                    0.221 * Math.log10(height);
+                }
+                bodyfatresult = (495 / denominator) - 450;
+
+                // Get the category
+                const message = getBodyfatcategory(bodyfatresult, gender);
+                const resultElement = document.getElementById("CalResult");
+                resultElement.innerHTML = `Body Fat Percentage: ${bodyfatresult.toFixed(2)}% - ${message}`;
+            }
+
+            // Getting the category from body fat percentage
+            function getBodyfatcategory(bodyfatresult, gender) {
+                let message;
+                if (gender === "male") {
+                    if (bodyfatresult < 2) {
+                        message = "Extremely Low (<2%)";
+                    } else if (bodyfatresult <= 5) {
+                        message = "Essential (2-5)%";
+                    } else if (bodyfatresult <= 13) {
+                        message = "Athletes (6-13)%";
+                    } else if (bodyfatresult <= 17) {
+                        message = "Fitness (14-17)%";
+                    } else if (bodyfatresult <= 24) {
+                        message = "Average (18-24)%";
+
+                    } else {
+                        message = "Obese (25% or higher)";
+                    }
+                } else {
+                    if (bodyfatresult < 10) {
+                        message = "Extremely Low (<10%)";
+                    } else if (bodyfatresult <= 13) {
+                        message = "Essential (10-13)%";
+                    } else if (bodyfatresult <= 20) {
+                        message = "Athletes (14-20)%";
+                    } else if (bodyfatresult <= 24) {
+                        message = "Fitness (21-24)%";
+                    } else if (bodyfatresult <= 31) {
+                        message = "Average (25-31)%";
+                    } else {
+                        message = "Obese (32% or higher)";
+                    }
+                }
+                return message;
+            }
+        </script>
+</body>
+</html>

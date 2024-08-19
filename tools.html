@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Tools</title>
+    <meta name="author" content="ChiKhim, XinRu, CoYing, KaiLing">
+    <meta name="description" content="Fitness Journey Website">
+    <meta name="keywords" content="Fitness, Lose weight, Muscle, Get toned, Nutrition, Wellness">
+    <link rel="icon" href="/assets/img/logo/logo.png">
+
+    <!-- ================================================
+                CSS
+    ===================================================== -->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body class="sub_page">
+    <div class="area ">
+        <!-- ============== Loader ============== -->
+        <div class="loader_bg">
+            <div class="loader"><img src="assets/animation/loading.gif" alt="" /></div>
+        </div>
+
+        <!-- ============== Navigation Bar ============== -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top topnavbar">
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/img/logo/logo.png" alt="Fitness" height="60px" width="200px" id="homelogo">
+            </a>
+            <h3 class="navbar-brand text-white fs-2 fw-bold">Tools</h3>
+            <div class="custom_menu-btn">
+                <button class="openbtn" onclick="openNav()">
+                    <span class="s-1">
+                    </span>
+                    <span class="s-2">
+                    </span>
+                    <span class="s-3">
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Navigation Side Bar -->
+        <div class="navOverlay">
+            <div class="overlay-content">
+                <img src="/assets/img/logo/logo.png" alt="logo" class="navlogo" width="250rem"
+                    style="padding-bottom: 20px;" />
+
+                <ul class="barlist">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="LossWeight.html">Lose Weight</a></li>
+                    <li><a href="getToned.html">GetToned</a></li>
+                    <li><a href="buildMuscle.html">Build Muscle</a></li>
+                    <li><a href="Nutrition.html">Nutrition Recipes</a></li>
+                    <li><a href="wellnessRoutine.html">Wellness Tips</a></li>
+                    <li><a href="#" class="active">Tools</a></li>
+                    <li><a href="fitnessProfile.html">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- ============== topshow Section ============== -->
+        <section>
+            <section class="topshow-wrap topshow-wrap-2"
+                style="background-image: url('assets/img/calculator1.jpg');"
+                data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row no-gutters slider-text align-items-end">
+                        <div class="col-md-9 ftco-animate pb-5">
+                            <h1 class="blurred-background mb-0 bread">Fitness-Tools</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section> 
+
+        <!-- ============== Infor Section ============== -->
+        <section class="infor">
+            <div class="container px-4 px-lg-5" style="margin-top: 4rem;">
+                <div class="row justify-content-center mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="featured-text text-center">
+                            <p class="text-black-50 mb-0">Welcome to our suite of health calculators designed to empower you on your wellness journey. These calculators are powerful tools that can help you gain insights into various aspects of your health, providing personalized information tailored to your unique needs. Whether you're looking to monitor your weight, or optimize your fitness routine, our collection of calculators is here to guide you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== Tools Section ============== -->
+        <section class="ftco-section container-fluid d-flex flex-column align-items-center justify-content-center"
+        style="padding-bottom: 10rem; padding-top: 4rem;">
+            <div class="container">
+                <div class="row mb-5 pb-5">
+                    <!-- BMI Calculator -->
+                    <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">    
+                        <a href="bmiCal.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                            <div class="media-body p-4">           
+                                <h3 class="heading">BMI Calculator</h3>           
+                                <p>BMI is commonly used in public health and clinical settings as a quick and easy method to assess whether a person has a healthy body weight.</p>       
+                            </div>   
+                        </a>
+                    </div>
+                    <!-- Sleep Calculator -->
+                    <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                        <a href="sleepCal.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                            <div class="media-body p-4">
+                                <h3 class="heading">Sleep Calculator</h3>
+                                <p>Sleep is a cornerstone of a healthy lifestyle, and the amount of sleep you get can significantly impact various aspects of your physical and mental health.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Body Fat Calculator -->
+                    <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                        <a href="BodyFatCal.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                            <div class="media-body p-4">
+                                <h3 class="heading">Body Fat Calculator</h3>
+                                <p>Body Fat percentage offers you a quick estimate of how much fat you have relative to your weight. This gives a quick snap-shot of total fat relative to the person's weight and age.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row mt-5 pt-4">
+                    <!-- Water Intake Calculator -->
+                    <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                        <a href="WaterIntakeCal.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                            <div class="media-body p-4">
+                                <h3 class="heading">Water Intake Calculator</h3>
+                                <p>70% water, a liquid foundation shaping life's symphony. Every sip reinforces its melody, every glass replenishes its rhythm, ensuring health's harmonious composition.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- DRI Calculator -->
+                    <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                        <a href="DRICal.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">
+                            <div class="media-body p-4">
+                                <h3 class="heading">DRI Calculator</h3>
+                                <p>The DRI calculator is the ultimate way to compute all the necessary macro-, micronutrition, and vitamins needed in your daily menu.</p>
+                            </div>
+                        </a>
+                    </div>                
+                    <!-- Calories Burnt Calculator -->
+                    <div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+                        <a href="CaloriesBurntCal.html" class="d-block services text-center" style="text-decoration: none; color: inherit;">                    
+                            <div class="media-body p-4">                            
+                                <h3 class="heading">Calories Burnt Calculator</h3>
+                                <p>A Calories Burned Calculator is a tool designed to estimate the number of calories a person burns during various activities, such as exercise or daily tasks.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end tools -->
+
+        <!--  ====================== FOOTER ====================== -->
+        <footer class="footer small text-center text-white-50">
+            <div class="container px-4 px-lg-5">
+                <p>
+                    &copy; Fitness 2024 | All Rights Reserved
+                </p>
+            </div>
+        </footer>
+        <!-- END OF FOOTER -->
+
+        <!-- ================================================
+                JavaScript
+        ===================================================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+        <!-- JS -->
+        <script src="js/scripts.js"></script>
+</body>
+
+</html>
