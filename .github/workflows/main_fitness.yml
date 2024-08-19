@@ -19,14 +19,10 @@ jobs:
           dotnet-version: '6.0.x'
 
       - name: Build with dotnet
-        run: |
-          cd ./path/to/your/project
-          dotnet build --configuration Release
+        run: dotnet build nchikhim/UCCD2323_P8P9G50/MyProject.csproj --configuration Release
 
       - name: dotnet publish
-        run: |
-          cd ./path/to/your/project
-          dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish nchikhim/UCCD2323_P8P9G50/MyProject.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -38,27 +34,20 @@ jobs:
     runs-on: windows-latest
     needs: build
     environment:
-      name: 'production'
+      name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    permissions:
-      id-token: write
-
+    
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: .net-app
       
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         with:
           app-name: 'Fitness'
-          package: ${{ env.DOTNET_ROOT }}/myapp
+          slot-name: 'Production'
+          package: ${{env.DOTNET_ROOT}}/myapp
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_768C861EC4B447F19BC723D8B7D9FF79 }}
