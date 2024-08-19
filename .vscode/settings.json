@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0be0f4dd-ab40-42d7-b99d-0592c1dfabf0/resourceGroups/UCCD2323_P8P9G50/providers/Microsoft.Web/sites/Fitness",
+    "appService.deploySubpath": "."
+}
